@@ -1,7 +1,3 @@
-====== PlayGround ======
-
-====== PlayGround ======
-
 ====== Stage 1: Pre-Production Check ======
 
 ===== Download your text. =====
@@ -28,16 +24,15 @@ All non-Praxis Wiki webtexts //must// have at least one HTML file. Even if autho
 
 ==== 2. All (non-Praxis Wiki) webtexts must have an index.html file. ====
 
-
 There must be a file called index.html in the main directory. If the landing page is named something else, or if it’s in another directory, alert the Stage 2 editor on Slack and leave a note in the Query Page you created earlier.
 
 ==== 3. All PDF files need corresponding .docx files. ====
 
-Make sure that all PDF files have have corresponding .docx files in the file structure. Editors will usually need to edit these documents, and cannot do so with only the PDF. If these files are missing, alert the Stage 2 editor on Slack and leave a note in the Query Page you created earlier.
+Make sure that all PDF files have corresponding .docx files in the file structure. Editors will usually need to edit these documents, and cannot do so with only the PDF. If these files are missing, alert the Stage 2 editor on Slack and leave a note in the Query Page you created earlier.
 
 ==== 4. Check that we have the original files for any externally embedded media files. ====
 
-Begin by familiarizing yourself with the definitions of externally embedded media files and internally embedded media files below. The Stage 1 process for each type of content differs significantly.
+Familiarize yourself with the definitions of externally embedded media files and internally embedded media files below. The Stage 1 process for each type of content differs significantly.
 
   * **Externally embedded media files:** Files hosted on platforms such as YouTube, Soundcloud, etc. and that are embedded in the webtext through links to those platforms. 
   * **Internally embedded media files:** Files that are contained within the webtext's file directory and that are displayed through links to their location in the file directory.
@@ -50,17 +45,17 @@ Begin by familiarizing yourself with the definitions of externally embedded medi
   * A transcript to upload with third-party streaming sites as an .rtf file.
   * Metadata that includes: A semantic title of the content (less than five words long), a 50-word description of each media file, and 5 keywords specific to that file uploaded as a text file.
 
-:!: **Important:** If the author has embedded media elements from //other// YouTube/Vimeo/Streaming-Media content producers (e.g., a YouTube video produced by an educational organization), we should not upload a duplicate file to the KairosEditors YouTube account. Instead, use savefrom.net or keepvid.com to download a copy of that media for archival on Kairos' servers, but the webtext should still link to the originally authored media content.
+:!: **Important:** If the author has embedded media elements from //other// YouTube/Vimeo/Streaming Media content producers (e.g., a YouTube video produced by an educational organization), we should not upload a duplicate file to the KairosEditors YouTube account. Instead, use savefrom.net or keepvid.com to download a copy of that media for archiving on Kairos' servers. The webtext should still link to the originally authored media content.
 
 == 2. Move the files ==
 
 **Externally embedded media** files need to be moved to //Kairos//'s servers and streaming accounts. Ideally, authors will have provided those files for you, but you may need to download them yourself. (See Media Download Tools.) Moving this content allows us to keep a copy of the media files on our server (unlinked, as a backup) and to embed them with captioning. To access Kairos’s dedicated accounts for externally embedded media, see the Training Wiki.
 
-Depending on the site, the metadata might be different, but here is a general example:
+Depending on the site, the necessary metadata might be different, but here is a general example:
 
   * Title: “Video Title” by Author(s) (Kairos Vol.Issue Section)
   * Descriptions: Descriptions should be 50-100 words and detail the piece of media.
-  * Keywords: Check the [MISSING INFO HERE] for keywords provided by the author. Additionally, add "kairos", "webtext", and "scholarly multimedia", as keywords.
+  * Keywords: Check the Upcoming Issue TOC for keywords provided by the author. Additionally, add "kairos", "webtext", and "scholarly multimedia", as keywords.
   * Category: Education
   * License and rights ownership: Creative Commons (unless otherwise specified).
 
@@ -80,10 +75,10 @@ Ensure that the media files work and do nothing else. If the media is internally
 
 Carry out the following steps for all documents included in the webtext that might be considered "print-styled" or "article-like":
 
-  - Include the standard header, substituting the relevant volume, issue, and author name.
-  - Include the author’s name, webtext title, and page numbers.
-  - Format the document using single-spaced lines.
-  - Export the as a PDF and re-link it within the webtext as necessary.
+  * Include the standard header, substituting the relevant volume, issue, and author name.
+  * Include the author’s name, webtext title, and page numbers.
+  * Format the document using single-spaced lines.
+  * Export the as a PDF and re-link it within the webtext as necessary.
 
 **Standard Header Example:** This is [a pre-print version of / supplementary material for] the [Author’s name, if not listed in the body] webtext [title name, if not listed in the body] published in Kairos: Rhetoric, Technology, Pedagogy, Vol(Issue), available at [[http://kairos.technorhetoric.net/xx.x/section/foldername.”|http://kairos.technorhetoric.net/xx.x/section/foldername.”]]
 
@@ -100,4 +95,4 @@ The editor will advise you on how to proceed, and the timeline on this webtext w
 
 When you are finished with Stage 1, you will upload your assigned webtext to the editors server so that it can move through the remaining stages of the production cycle. Rename the folder /authorslastname-2/ and upload it using an SFTP application to the /copy-editing/XX.X folder on the editors server. The XX.X represents the current volume and issue you’re working on.
 
-Important: Note that while you downloaded the assigned webtext from the **submissions server** at the beginning of this stage, you upload it to the **editors server** at the end of the stage.
+:!: **Important:** Note that while you downloaded the assigned webtext from the **submissions server** at the beginning of this stage, you upload it to the **editors server** at the end of the stage.
