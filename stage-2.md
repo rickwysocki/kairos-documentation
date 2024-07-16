@@ -97,10 +97,14 @@ The following are common HTML/CSS markup issues for Kairos Webtexts. Validating 
 <!-- Continue revising here. -->
 ### General HTML and Structure
 
-* Ensure that the tags cohere to standard HTML hierarchy (e.g., <p> tags should be INSIDE <div> tags; a tag must close before its parent tag does; some elements are not allowed to be children of other elements)
+Ensure the following markup practices for **each page** of the webtext.
+
+* Ensure that the HTML tags cohere to standard HTML hierarchy. Here are two examples:
+  * ```<p>``` tags should be INSIDE ```<div>``` tags
+  * A tag must close before its parent tag does.
 * Ensure all tags are closed. Remove extra / unnecessary opening and closing tags. 
-* Double-check that all <div> tags have a closing </div> tag. 
-* Make sure the html tag is closed at the end of each html page. 
+* Double-check that all ```<div>``` tags have a closing ```</div>``` tag. 
+* Make sure the ```<html>``` tag is closed with ```</html>``` at the end of each html page. 
 * Make sure metadata is inside <head></head> and the overall structure of the file is: <html> <head> </head> <body> </body> </html> 
 * Check for closing quotes in tags 
 * Check HTML for unused CSS style selectors and remove them Check HTML for id/class errors. IDs can only be used once on a single HTML file. If ID tags are repeated, they should be changed to classes. (For reference: https://css-tricks.com/the-difference-between-id-and-class/) 
