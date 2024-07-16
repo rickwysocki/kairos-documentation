@@ -99,14 +99,14 @@ The following are common HTML/CSS markup issues for Kairos Webtexts. Validating 
 
 Ensure the following markup practices for **each page** of the webtext.
 
-* Ensure that the HTML tags cohere to standard HTML hierarchy. Here are two examples:
+* HTML tags cohere to standard HTML hierarchy. Here are two examples:
   * ```<p>``` tags should be INSIDE ```<div>``` tags
   * A tag must close before its parent tag does.
-* Ensure all tags are closed. Remove extra / unnecessary opening and closing tags. 
-* Double-check that all ```<div>``` tags have a closing ```</div>``` tag. 
-* Make sure the ```<html>``` tag is closed with ```</html>``` at the end of each html page. 
-* Make sure metadata is inside <head></head> and the overall structure of the file is: <html> <head> </head> <body> </body> </html> 
-* Check for closing quotes in tags 
+* All tags are closed. Remove extra / unnecessary opening and closing tags. 
+* All ```<div>``` tags have a closing ```</div>``` tag. 
+* The ```<html>``` tag is closed with ```</html>``` at the end of each HTML page. 
+* Metadata is inside ```<head></head>``` and the overall structure of the file is: ```<html> <head> </head> <body> </body> </html>``` [NOTE: There is likely a simpler way to represent this.]
+* All relevant attributes within tags have closing quotation marks. E.g., ```<div class="example">```
 * Check HTML for unused CSS style selectors and remove them Check HTML for id/class errors. IDs can only be used once on a single HTML file. If ID tags are repeated, they should be changed to classes. (For reference: https://css-tricks.com/the-difference-between-id-and-class/) 
 * Use straight quotes instead of curly quotes in all attribute tags (VSCode’s find and replace in project makes it very easy to replace all curly quotes to straight quotes) 
 * Check for and remove inline styles or other styles defined in the html. Add them to css. Don’t define styles in HTML. Define styles in CSS.
