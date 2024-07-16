@@ -1,4 +1,4 @@
-_Note: This is an in-process, working draft of the Stage 2 revisions. I am writing it in Markdown, but it can be reformatted into the relevant Wiki syntax later._
+_Note: This is an in-process, working, and incomplete draft of the Stage 2 revisions. I am writing it in Markdown, but it can be reformatted into the relevant Wiki syntax later._
 
 ## Stage 2: Design Edit
 
