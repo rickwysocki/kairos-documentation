@@ -97,19 +97,50 @@ The following are common HTML/CSS markup issues for Kairos Webtexts. Validating 
 <!-- Continue revising here. -->
 ### General HTML and Structure
 
-* Ensure that the tags cohere to standard HTML hierarchy (e.g., <p> tags should be INSIDE <div> tags; a tag must close before its parent tag does; some elements are not allowed to be children of other elements)
-* Ensure all tags are closed. Remove extra / unnecessary opening and closing tags. 
-* Double-check that all <div> tags have a closing </div> tag. 
-* Make sure the html tag is closed at the end of each html page. 
-* Make sure metadata is inside <head></head> and the overall structure of the file is: <html> <head> </head> <body> </body> </html> 
-* Check for closing quotes in tags 
-* Check HTML for unused CSS style selectors and remove them Check HTML for id/class errors. IDs can only be used once on a single HTML file. If ID tags are repeated, they should be changed to classes. (For reference: https://css-tricks.com/the-difference-between-id-and-class/) 
-* Use straight quotes instead of curly quotes in all attribute tags (VSCode’s find and replace in project makes it very easy to replace all curly quotes to straight quotes) 
-* Check for and remove inline styles or other styles defined in the html. Add them to css. Don’t define styles in HTML. Define styles in CSS.
-* Ensure that special and reserved characters (most commonly ampersands, em dashes, and en dashes) are represented by their HTML character entities (& for ampersand, — for em dash, and – for en dash) 
-* Ensure that the author’s original metadata is removed after adding new metadata. There should only be one <head>, one <title>, etc. 
-* Remove HTML line breaks in the middle of a paragraph. Paragraphs should be all on one line. (You should then adjust your individual word wrap settings in your text or markup editor) Why: extra line breaks in the HTML can add extra spaces when visualized and html with line breaks is harder for humans to read and edit. Headings
+<!-- Needs framing text. Also, would this be better as a table? -->
 
+| Task |  Reference |
+| ---- |  --- |
+| Ensure that the tags cohere to standard HTML hierarchy. | [MDN - Implementing Structural Hierarchy](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#implementing_structural_hierarchy) | 
+| Ensure all tags are closed. Remove extra / unnecessary opening and closing tags. |
+| Double-check that all `<div>` tags have a closing `</div>` tag. |
+| Make sure the html tag is closed at the end of each html page.  |
+| Make sure metadata is inside <head></head> and the overall structure of the file is: `<html> <head> </head> <body> </body> </html>`  |
+| Check for closing quotes in tags  |
+| Remove any unused CSS style selectors from the HTML. | |
+| Check for errors related to class and ID selectors. If an ID selector is used more than once in an HTML file, change it to a class selector and update the CSS as necessary. (For reference: https://css-tricks.com/the-difference-between-id-and-class/)  | <ul><li>[MDN - ID Selectors](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors#id_selectors)</li><li>[MDN - Class Selectors](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors#class_selectors)</li></ul>|
+| Use straight quotes instead of curly quotes in all attribute tags (VSCode’s find and replace in project makes it very easy to replace all curly quotes to straight quotes)  |
+| Check for and remove inline styles or other styles defined in the html. Add them to css. Don’t define styles in HTML. Define styles in CSS. |
+| Ensure that special and reserved characters (most commonly ampersands, em dashes, and en dashes) are represented by their HTML character entities (& for ampersand, — for em dash, and – for en dash) FIX WITH SPECIAL CHARACTERS |
+| Ensure that the author’s original metadata is removed after adding new metadata. There should only be one `<head>...</head>`, one `<title>...</title>`, etc.  |
+| Remove HTML line breaks in the middle of a paragraph. Paragraphs should be all on one line. (You should then adjust your individual word wrap settings in your text or markup editor) Why: extra line breaks in the HTML can add extra spaces when visualized and html with line breaks is harder for humans to read and edit. |
+| Check that headings are nested correctly. Don’t jump from `<h1>` to `<h3>`, for example. Restyle headings in CSS if you need to reorder them. Ensure that there is only one H1 tag per page Ensure the title of the webtext is an `<h1>` within `<body>`. It can be `<h2>` but it should be the highest level header in the html page. | |
+| Make sure all paragraphs are surrounded by `<p></p>` Remove `<br>` when it is used to break between paragraphs for spacing. Add css for `<p>` to give them more margin or padding. Be generally skeptical of `<br>` tags. Are they necessary? Most should just be <p> tags or style rules for margin and padding? Figures and images should never be inside `<p>`. Style them separately. | | 
+| Ensure that the `figure` element, including captions and alt-text is used for all images and figures.| [MDN - The Figure Element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figure)| 
+| Review any tables and ensure proper markup.  | [MDN - Tables](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table)| 
+| Remove any inline styles and add them to the .css file. | |
+| Use `<strong>` to mark bold text, not `<b>`. To mark italics: `<em>` marks words or phrases that are emphasized `<cite>` marks titles that are italicized `<i>` marks other types of italics (foreign words, concepts, and so forth) If one form of markup for italics is not showing up visually, define them as italics in the CSS.| |
+| Ensure that alt tags or long descs are included for every graphic or embedded media element. If they are not, write them yourself. | |
+| Ensure that transcripts are provided/linked to, as design allows. The Stage 1 AE should have already uploaded transcripts to third-party servers, where needed. If transcripts are missing, follow up with the Stage 1 AE. | |
+| Ensure that all files are named with lowercase names with hyphens (never underscores or uppercase letters). | |
+| Assess the web-text’s accessibility using an accessibility checker, such as WAVE (http://wave.webaim.org/) or Pa11y.org. These tools will check for common accessibility-related markup errors, such as missing alt tags or counter-intuitive heading structures that affect screen reader technology. (NOTE: This is different than the HTML validation described under Usability, below) | |
+| Ensure that `<em>` tags are used only for italics that indicate emphasis. See technical checklist for details. Check for color contrast using WebAIM’s WAVE checker. Double-check with your browser Developer tool. If color contrast is bad, change it in css. If the page is not responsive to screen size, make it so or, if you don’t know how, mark it explicitly in the wiki and stage 4, 5, or 6 will change it. | |
+| Ensure that the home page for all non-wiki webtexts is called “index.html”. Revise this file name as necessary Ensure that all files names are 1) lowercase and 2) include hyphens in place of spaces. Revise these file names as necessary. If you change any file names, then all respective links must also be changed to retain a working webtext. Using find (the previous file name) and replace (the new file name) in your code editor is a simple way to achieve this, but then check all links to be sure | |
+| Ensure that the root folder for non-wiki webtexts is authorslastname – all lower case and one word (e.g., /ball/) – or that co-authors are hyphenated (e.g., /ball-eyman/). If there are more than two authors, use firstauthor-et-al (e.g., /ball-et-al). Check that all webpages in non-wiki webtexts have `<title>` tags that follow Kairos’s page-title conventions (e.g., Kairos XX.X: Authorlastname, Short Webtext Title - PageTitle). See current issue for examples. | |
+| Check that all internal AND external links work. Fix any broken links All external links open in new browser windows using the following HTML tag: `<a href=“linkurl” target=“_blank”>` (Note: PraxisWiki links cannot currently be set to open in a new window/tab. It’s ok.) Check that internal links (including links to other Kairos webtexts) open in same browser window unless it’s purposeful to not (e.g., pop-ups). If you these links open in new browser windows, remove `target=“_blank”` from thir `<a>` tags. (See example in previous item for a model) Ensure that all images are in /images/ folder (or /media/ folder, as appropriate), and reorganize these files into the appropriate folders as necessary. If you move files into new folders (or into folders at all), you MUST revise each <img> tag (or other relevant tag) that uses them throughout the webtext. Using find (the previous tag) and replace (the updated tag pointing to the file in the new folder) in your code editor is a simple way to achieve this, but then check all images relevant images / media files to be sure. | |
+| Ensure that CSS is in a linked file, NOT embedded inline in each HTML doc. If it is embedded, scrape all the CSS out of the webtext (different pages may include slightly different CSS, so make sure to check each page) into a new CSS file, then embed that CSS file in the `<head>` section of each HTML page in the webtext.
+| Ensure that Javascript and any other scripting or coding that the author uses works and fix any broken code yourself if you are able. If not, and you can’t figure it out, consult the section editor and/or staff. | |
+| Test the HTML-based webtext across browsers to ensure compatibility (i.e., Internet Explorer 5.5+, Firefox 1.0+, Safari 1.0+, Opera 8+). | |
+| Ensure that the webtext degrades gracefully when elements such as JavaScript are not enabled by a user’s browser or when images/CSS fail to load. In Chrome, you can turn off Javascript by going to your Chrome settings > More Tools > Developer Tools. Then, click the three vertical dots in the upper right hand corner of the Dev Tools and click Settings. Under “Debugger,” click “Disable Javascript Finally, validate the HTML files using the W3C Markup Validation Service to catch any other errors in the markup Edit Sustainability Checklist (preservation/archiving). | |
+| Ensure that all third-party streaming media links have been swapped out from authors' account to Kairos' account. If these links haven’t been changed, change them yourself. The Stage 1 editor should provide you a list or updated URLs. If you are missing these links, query the Stage 1 editor. | |
+| Ensure that the Stage 1 editor has revised all word-processing documents to include the appropriate Kairos information (pre-print, co-publication, etc.) and remade them into PDFs. If these are absent query the Stage 1 editor. Revised links throughout the webtext to point to these new files. | |
+| Move all non-publishable files (doc, ppt, mswmm, etc.) to their own /working-files/ folder, for deletion after copy-editing has been completed (during Stage 7). 
+
+### Metadata
+
+
+NOTE
+If the left hand column is also a header, the <td></td> should be <th></th> instead. Miscellaneous tags and styles
 
 
 
