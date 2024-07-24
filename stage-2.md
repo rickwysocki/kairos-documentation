@@ -1,49 +1,58 @@
 _Note: This is an in-process, working, and incomplete draft of the Stage 2 revisions. I am writing it in Markdown, but it can be reformatted into the relevant Wiki syntax later._
 
-## Stage 2: Design Edit
+# Stage 2: Design Edit
+
+## Introduction
 
 This stage ensures that the webtext is technologically ready for
-publication. Unless you are working on a PraxisWiki piece, you will need a a WYSIWYG or code
-editor and will need to be proficient at making changes to the code. You may also be called upon
-to edit texts that are not in X/HTML & CSS. This is rare and will depend
-on your facility with and the availability of the relevant software.
-If you feel that a proprietary part of the webtext needs design OR
+publication. Unless you are working on a PraxisWiki piece, you will need a [WYSIWYG application](https://en.wikipedia.org/wiki/WYSIWYG) or [text editor](#a-note-on-text-editors) and will need to be proficient at making changes to markup. In rare cases, you may edit texts that are not in X/HTML & CSS. This will depend on your facility with and the availability of the relevant software.
+
+If you feel that a proprietary [NOTE: WHAT IS PROPRIETARY INDICATING HERE?] part of the webtext needs design or
 copy-editing, immediately bring it to the attention of the
 section editor who may decide to return that portion of the webtext to
-the authors for additional copy-editing.
+the authors for revision.
 
-**Note:** the Mozilla Developer Network and / or DevDocs is your friend for
-any question related to markup or code syntax. Don't use W3Schools!
-(Much of it is outdated / deprecated info.)
+### Reference Material
 
-### Note: The Power to Make Changes <!-- Should be an admonition block -->
-The design edit consists of checking for technological sustainability, usability, and accessibility. Design-editing, just like copy-editing, is a practice in negotiation with the author’s design-voice. This stage is the first step in the process of changing what the author sent Kairos to make it adhere to our guidelines and is often a stage where AEs think they have less power than they do. If you see something that needs correcting, change it. If you’re concerned that it will modify what the author was trying to accomplish, check with the editorin a noticeable, significant way.
+We only recommend the [Mozilla Developer Network (MDN)](https://developer.mozilla.org/en-US/) and [DevDocs](https://devdocs.io/html/) questions related to markup or code. Where possible, these instructions link directly to MDN reference material that explains how to carry out specific tasks. Since Stage 2 involves working directly with markup, it is easy to make small but meaningful errors. So, please make a habit of reviewing linked reference material when carrying out Stage 2 edits, even if you feel knowledgeable about a task.
 
-For example, editors have often deleted unnecessary elements from an author’s webtext when those elements didn’t make rhetorical or aesthetic sense. If the editor of Kairos can’t figure out why it’s there, then it’s likely not there for a good reason. However, the lead editor also usually tells authors she’s removed something in their piece during the author query, in case she made an error. You have to be a good judge of multimodal scholarly design practices to make these kinds of calls. The more you do it, the more practiced you will become. In the meantime, ask about everything you’re unsure of. But don't avoid or ignore a change, because this will create more work later in the production cycle.
+### The Power to Make Changes <!-- Should be an admonition block -->
 
-If something doesn’t work design wise, change it. If you don’t know how, mark it explicitly in the wiki and stage 4, 5, or 6 will change it and/or ask folks in #production how to change it.
+Design-editing, just like copy-editing, is a negotiation between editors and authors. This stage begins the process of formatting a webtext according to _Kairos_'s guidelines, and editors often think they have less power than they do. If you see something that needs correcting, change it. If you’re concerned that it will modify what the author was trying to accomplish, check with the editor.
 
-### A Note on Text-Editors <!-- Move this to an appendix in the final version -->
+It is typical to delete unnecessary elements from a webtext when those elements don't make rhetorical or aesthetic sense. If you can’t figure out why it’s there, then it may be extraneous. Delete it, but leave a record in the query page so that we can let authors know. You have to be a good judge of multimodal scholarly design practices to make these kinds of calls. The more you do it, the more practiced you will become. 
 
-_Kairos_ does not recommend one text editor over another, with the exception that neither Microsoft FrontPage nor iWeb are allowed for either authors' submissions or your editing because of the incompatible, proprietary, and unsustainable markup they introduce to webtexts. Free or open-source programs are just as good as paid ones if you know what you're doing, and WYSIWYG vs. plain text will depend on your preferences and, sometimes, the webtext. Above all, we do not expect you to pay for professional software, but you do need to have access to and be comfortable with whatever web-editing software you choose. Free code editors include Atom, Sublime Text, and Visual Studio Code. (Note: Atom has been sunsetted. It is still usable but no longer maintained, and packages can no longer be downloaded for the program.)
+Ask about everything you’re unsure of. But don't avoid or ignore a change, because this will create more work later in the production cycle.
+
+### A Note on Text Editors
+
+_Kairos_ does not recommend one text editor over another, with the exception that neither Microsoft FrontPage nor iWeb are allowed due to the incompatible, proprietary, and unsustainable markup they introduce to webtexts. There are a variety of free and/or open-source editors programs that are just as good as paid ones. We do not expect you to pay for professional software, but you do need to have access to and be comfortable with whatever text editor you choose. Free code editors include Atom, Sublime Text, and Visual Studio Code. (Note: Atom has been sunsetted. It is still usable but no longer maintained, and packages can no longer be downloaded for the program.) NOTE: REFACTOR THIS INTO A NEW PAGE
 
 ## Instructions
 
-This section introduces the major tasks involved in the Stage 2 design edit. Because each of these tasks can be quite complicated, they will often link to more detailed instructions, included below.
+This section is an **overview** of Stage 2. Because each task can be quite complicated, this overview links to more detailed instructions included below.
 
 <!-- I need to figure out the best way to organize all the nested content on this page. -->
 
 ### Download the Webtext
 
-Download the /authorslastname-2/ version of your webtext from the /editors/copy-editing server location. Fix any design issues listed on https://kairos.technorhetoric.net/styleguide.html#html and/or the checklist below.
+Download the `/authorslastname-2/` version of your webtext from the `/editors/copy-editing` server location. 
+
+### Fix Any Design Issues
+
+Open the webtext directory in both your text editor (markup) and in your browser(display). Review the following content and fix errors that you identify:
+
+* [Rhetorical Concerns](#rhetorical-concerns)
+* [Technical Concerns](#technical-concerns)
+* [_Kairos_ Style Guide](https://kairos.technorhetoric.net/styleguide.html#html)
 
 ### Add the Required Metadata
 
-Add the required metadata and Javascript toolbar into every HTML or Wiki page. (See Instructions below.)
+Add the [required metadata](#adding-metadata) and [Javascript toolbar](#javascript-toolbar) into every HTML or PraxisWiki page. 
 
-### Add Design Queries to the Query Page
+### Add Notes and Queries to the Query Page
 
-Add any design queries (e.g., changes to navigation, etc.) to the author query document available on the Kairos Wiki after Stage 1 editing. Do NOT add design queries into the webtext itself.
+Add any design queries (changes you have made or are requesting) to the webtext query page created the Stage 1 editor. Do NOT add design queries into the webtext itself.
 
 If you encounter major design issues,  message the staff list immediately on Slack. The editor will decide if the issue needs to be resolved with the author. Once the issue is resolved, or if there are no major issues, create a new local folder /authorslastname-3/ on the editor’s server. In other words, keep the /authorslastname-2/ folder.
 
@@ -80,22 +89,21 @@ Slack message the staff list “Authorslastname xx.x ready for Stage 3. [INSERT 
 
 Authors of HTML-based webtexts often fail to follow our Technical Specifications, so AEs need to check for and fix the following issues. Note that wiki-based webtexts do not always follow these rules. so see clarifications below.
 
-### Rhetorical Checklist (NOTE: consider moving to a Stage 1 responsibility)
+### Rhetorical Concerns 
+
+(NOTE: consider moving to a Stage 1 responsibility)
 
 * Check each image, video, or other form of media that was **not** produced by the author, including remixed and quoted-at-length material, to ensure that its use falls under Fair Use.
 * Ensure that all media and design elements serve the rhetorical and aesthetic argument of the webtext. Remove or revise gratuitous elements.
 * Transcribe unnecessary, text-heavy screenshots into written text. 
 * Verify that each page of the webtext includes the names of the author(s).
 
-## Technical Checklist 
+## Technical Concerns 
 
 The following are common HTML/CSS markup issues for Kairos Webtexts. Validating the HTML will often, but not always, show you if there’s a problem with it. If you have a question about HTML or CSS, ask! We are all always learning about nooks and crannies of web-based authoring.
 
 <!-- Should be an admonition block. -->
 **Tip:** Pretty-print all HTML pages (either by using a package for VSCode such as Prettier or by copy-pasting the HTML into and out of a pretty-printer like JSONFormatter), to make the tabbing of HTML tags consistent and help identify improperly nested tags. After pretty-printing the HTML, do tag maintenance.
-
-<!-- Continue revising here. -->
-### General HTML and Structure
 
 <!-- Needs framing text. Also, would this be better as a table? -->
 
@@ -297,6 +305,50 @@ Ensure that the `content` attribute for `<meta name="viewport">`is `“width=dev
 <meta name="viewport"content="width=device-width, initial-scale=1">
 ```
 
+Include links to author-provided .css, .js, or other files at the bottom of the `<head>` section. Make sure not to repeat any of the `<meta>` elements included above.
+
+```
+NEED EXAMPLE HERE
+```
+
+Finally, ensure that `</head>` is included at the bottom of the metadata.
+
+```
+</head>
+```
+
+### Javascript Toolbar
+
+To add the _Kairos_ toobar, paste the following markup at the bottom of each page, just above the closing </body> tag.
+
+```
+<script type="text/javascript" src="/toolbar/2.0/kairos-toolbar.min.js"></script>
+```
+
+#### Directions for Customizing the Javascript Toolbar 
+
+In some instances, the toolbar must be customized. Examples include:
+
+* When names don’t have typical capitalization.
+* When webtext titles have names, formatting, or other text that might disrupt automated capitalization. 
+
+The toolbar accepts a hash of custom options, kairosToolbarOptions, for webtexts that have special or complex titles and author names.
+
+If the webtext’s title has any word that should be capitalized in a typical sentence (e.g., a proper noun, a title within the title), use the special toolbar script, with both the tc and sc lines (this stands for title case and sentence case)
+
+If the author names are not simple Capital fist Capital last, use the special toolbar script (e.g., Derek van Ittersum)
+
+Edit Loading the Toolbar with Custom Options Paste these lines right before the closing </body> tag (not in the <head> — let the webtext load up everything it needs before the toolbar itself even begins to load):
+
+<script type="text/javascript"> kairosToolbarOptions = { formattedTitle: { tc: "George Lucas Whipped Up a Winner with <i>Star Wars</i>", sc: "George Lucas whipped up a winner with <i>Star Wars</i>", }, authorList: { full: "van der Rohe, Mies and Marquis de Sade", abbr: "van der Rohe, M., & de Sade, M.", fullamp: "van der Rohe, Mies, & de Sade, Marquis" } }; </script> <script type="text/javascript" src="/toolbar/2.0/kairos-toolbar.min.js"></script> Edit Titles with Proper Nouns or Italics Sometimes titles are more complex than can be represented in the plain text of Dublin Core metadata. That includes titles with proper nouns, as well as titles that refer to other major titles. The toolbar automatically adds quotation marks and terminal punctuation as needed to webtext titles, so do not add them here.
+
+Also, because the as-is Dublin Core metadata will preserve proper nouns, the toolbar can just use that for Title Case titles, and you can submit just the Sentence case title you need to specifically modify.
+
+kairosToolbarOptions = { formattedTitle: { sc: "Some great title", tc: "Some Great Title" } }; Edit Titles of Reviews Webtexts In the special code of Reviews webtexts, use the following code unless the review has an actual title (in which case use that instead).
+
+kairosToolbarOptions = { formattedTitle: { sc: "Review of <i>Title of book in sentence case: Remember to capitalize first word of subtitle and proper nouns</i>, by Book Author Name in Title Case", tc: ""Review of <i>Title of the Book in Title Case</i>, by Book Author Name in Title Case"" } }; Edit Authors with Compound Last Names The toolbar automatically inverts first and last names, and creates initials for styles that do not use full first names. However, when names are more complex, the toolbar can do weird things. Passing in these values manually will ensure proper citation display. Note that the abbr and fullamp (full name plus ampersand) lists should use an escaped ampersand, &, before the final author name in the list. (full, for simple full names, should just use an and):
+
+kairosToolbarOptions = { authorList: { full: "van der Rohe, Mies and Marquis de Sade", abbr: "van der Rohe, M., & de Sade, M.", fullamp: "van der Rohe, Mies, & de Sade, Marquis" } }; Detailed notes on the toolbar can be found by visiting: https://web.archive.org/web/20170325093231/https://github.com/karlstolley/kairos-toolbar/
 
 ------
 

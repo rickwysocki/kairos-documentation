@@ -13,3 +13,5 @@ There are a number of terms unique to Kairos that should be defined in a glossar
 - [ ] webtext
 - [ ] editors server
 - [ ] submissions server
+- [ ] queries (design queries?)
+- [ ] query page
