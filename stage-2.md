@@ -197,7 +197,7 @@ Include the full title of the webtext (with any punctuation) in the `content` at
 <meta name="DC.title" content="Opening an Invitation to Remix: Interviews with Kairos Best Webtext Winners"> 
 ```
 
-Include the full name of each author and/or designer in the `content` attribute of individual `<meta name="DC.creator">` elements. For collaborative webtext, this means adding a `<meta name="DC.creator">` element for each author.
+Include the full name of each author and/or designer in the `content` attribute of individual `<meta name="DC.creator">` elements. For a collaborative webtext, this means adding a `<meta name="DC.creator">` element for each author.
 
 ```
 <meta name="DC.creator" content="Susan Delagrange"> 
@@ -273,6 +273,30 @@ Include the full title of the webtext (with any punctuation) in the `content` at
 ```
 <meta name="citation_title" content="The Arrow and the Loom"> 
 ```
+
+Include **only** the first author of as the `content` attribute of the `<meta name="citation_author">` element.
+
+```
+<meta name="citation_author" content="Doug Eyman"
+```
+
+Include the issue's publication date in YYYY/MM/DD format as the `content` attribute of the `<meta name="citation_date">` element. Note that this line of metadata uses slashes for the date whereas the `DC.date`metadata included above uses dashes.
+
+
+The citation_date” should equal the YYYY/MM/DD of publication. NOTE: This line of metadata uses slashes (while Dublin Core, above, uses dashes).
+
+```
+<meta name="citation_date" content="2016/01/15">
+<!--END Metadata for Google Scholar-->
+```
+
+
+Ensure that the `content` attribute for `<meta name="viewport">`is `“width=device-width, initial-scale=1”` to ensure that the window scales to the size of a user’s device.
+
+```
+<meta name="viewport"content="width=device-width, initial-scale=1">
+```
+
 
 ------
 
