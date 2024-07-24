@@ -173,11 +173,7 @@ The following HTML goes in the header of every `.html` file. The Annotated Marku
 
 #### Modifying the Metadata
 
-Reminders: <!-- Should be admonition -->
-
-Use straight quotes, not curly quotes in all HTML, including metadata. Use Title Case for titles Don’t put spaces between quotation marks and the text inside it. (content=“Abstract” is correct, content=” Abstract “ is incorrect.)
-
-##### As long as the piece is written in English, there are no modifications for lines 1-5.
+As long as the piece is written in English, there are no modifications for lines 1-5.
 
 ```
 <!DOCTYPE html>
@@ -186,7 +182,7 @@ Use straight quotes, not curly quotes in all HTML, including metadata. Use Title
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 ```
-##### Include the full title of the webtext (with any punctuation) as well as the name of the individual page in the `<title>` element.
+Include the full title of the webtext (with any punctuation) as well as the name of the individual page in the `<title>` element.
 
 ```
 <title>Kairos XX.X: Author, Article Title - Page Title</title>
@@ -195,13 +191,13 @@ Use straight quotes, not curly quotes in all HTML, including metadata. Use Title
 * [Single author example.](link)
 * [Multiple author example.](link)
 
-##### Inlude the full title of the webtext (with any punctuation) in the `content` attribute of the `<meta name="DC.title">` element.
+Include the full title of the webtext (with any punctuation) in the `content` attribute of the `<meta name="DC.title">` element.
 
 ```
 <meta name="DC.title" content="Opening an Invitation to Remix: Interviews with Kairos Best Webtext Winners"> 
 ```
 
-##### Include the full name of each author and/or designer in the `content` attribute of individual `<meta name="DC.creator">` elements. For collaborative webtext, this means adding a `<meta name="DC.creator">` element for each author.
+Include the full name of each author and/or designer in the `content` attribute of individual `<meta name="DC.creator">` elements. For collaborative webtext, this means adding a `<meta name="DC.creator">` element for each author.
 
 ```
 <meta name="DC.creator" content="Susan Delagrange"> 
@@ -210,7 +206,7 @@ Use straight quotes, not curly quotes in all HTML, including metadata. Use Title
 <meta name="DC.creator" content="Remi Yergeau">
 ```
 
-##### The next three lines (DC. type, DC.format, DC.language) do not require modifications.
+The next three lines do not require modifications.
 
 ```
 <meta name="DC.type" content="Text">
@@ -218,9 +214,67 @@ Use straight quotes, not curly quotes in all HTML, including metadata. Use Title
 <meta name="DC.language" content="en">
 ```
 
-##### Include webtext keywords in the `content` attribute of the `<meta name="DC.subject">` element. These are located [NEED TO INSERT THIS LOCATION]. If the author hasn't provided keywords, write them yourself.
+Include webtext keywords in the `content` attribute of the `<meta name="DC.subject">` element. These are located [NEED TO INSERT THIS LOCATION]. If the author hasn't provided keywords, write them yourself.
 
 ```
 <meta name="DC.subject" content="webtext, award winners, Kairos, remix, interviews">
 
 ```
+
+The next line does not require modification.
+
+```
+<meta name="DC.publisher" content="Kairos: A Journal of Rhetoric, Technology, and Pedagogy">
+```
+
+Include the relevant volume and issue numbers in the `content` attribute of the `<meta name="DC.subject">` atrribute.
+
+```
+<meta name="DC.source" content="20.2">
+```
+
+Include the relevant section name as the `content` attribute for the `<meta name="DC.isPartOf">` element.
+
+```
+<meta name="DC.isPartOf" content="Interviews">
+```
+
+Include the issue's publication date in YYYY-MM-DD format as the `content` attribute of the `<meta name="DC.date">` element. Note that this line of metadata uses dashes for the date whereas the Google Scholar metadata included below uses slashes.
+
+```
+<meta name="DC.date" content="2016-01-15"> 
+```
+
+Include the URL as the `content` attribute of `<meta name="DC.identifier">` for the specific page in which it appears. This means that this line should be edited for each .html file in a webtext. The URL will differ depending on whether your webtext is HTML or wiki-based.
+
+HTML Example:
+
+```
+<meta name="DC.identifier" content="http://kairos.technorhetoric.net/20.2/interviews/delagrange-et-al/index.html">
+```
+
+Wiki Example:
+
+```
+<meta name="DC.identifier" content="http://praxis.technorhetoric.net/[Paste the URL from the wiki entry here]"> 
+```
+
+
+Include a short (3-5 sentence) abstract of the webtext as the `content` attribute of the `<meta name="DC.description">` element.
+
+```
+<meta name="DC.description" content="[Include the abstract here.]">
+<!--END Dublin Core Metadata-->
+<!--BEGIN Metdata for Google Scholar-->
+```
+
+Include the full title of the webtext (with any punctuation) in the `content` attribute of the `<meta name="citation_title">` element.
+
+```
+<meta name="citation_title" content="The Arrow and the Loom"> 
+```
+
+------
+
+
+Reminder: Use straight quotes, not curly quotes in all HTML, including metadata. Use Title Case for titles Don’t put spaces between quotation marks and the text inside it. (content=“Abstract” is correct, content=” Abstract “ is incorrect.)
