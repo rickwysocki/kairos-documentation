@@ -114,7 +114,7 @@ The following are common HTML/CSS markup issues for Kairos Webtexts. Validating 
 | Ensure that special and reserved characters (most commonly ampersands, em dashes, and en dashes) are represented by their HTML character entities (& for ampersand, — for em dash, and – for en dash) FIX WITH SPECIAL CHARACTERS |
 | Ensure that the author’s original metadata is removed after adding new metadata. There should only be one `<head>...</head>`, one `<title>...</title>`, etc.  |
 | Remove HTML line breaks in the middle of a paragraph. Paragraphs should be all on one line. (You should then adjust your individual word wrap settings in your text or markup editor) Why: extra line breaks in the HTML can add extra spaces when visualized and html with line breaks is harder for humans to read and edit. |
-| Check that headings are nested correctly. Don’t jump from `<h1>` to `<h3>`, for example. Restyle headings in CSS if you need to reorder them. Ensure that there is only one H1 tag per page Ensure the title of the webtext is an `<h1>` within `<body>`. It can be `<h2>` but it should be the highest level header in the html page. | |
+| Check that headings are nested correctly and that each page includes only one `<h1>` heading. | [MDN - Section Heading Usage Notes](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements#usage_notes)|
 | Make sure all paragraphs are surrounded by `<p></p>` Remove `<br>` when it is used to break between paragraphs for spacing. Add css for `<p>` to give them more margin or padding. Be generally skeptical of `<br>` tags. Are they necessary? Most should just be <p> tags or style rules for margin and padding? Figures and images should never be inside `<p>`. Style them separately. | | 
 | Ensure that the `figure` element, including captions and alt-text is used for all images and figures.| [MDN - The Figure Element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figure)| 
 | Review any tables and ensure proper markup.  | [MDN - Tables](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table)| 
@@ -136,11 +136,91 @@ The following are common HTML/CSS markup issues for Kairos Webtexts. Validating 
 | Ensure that the Stage 1 editor has revised all word-processing documents to include the appropriate Kairos information (pre-print, co-publication, etc.) and remade them into PDFs. If these are absent query the Stage 1 editor. Revised links throughout the webtext to point to these new files. | |
 | Move all non-publishable files (doc, ppt, mswmm, etc.) to their own /working-files/ folder, for deletion after copy-editing has been completed (during Stage 7). 
 
-### Metadata
+### Adding Metadata
 
+The following HTML goes in the header of every `.html` file. The Annotated Markup section below explains how to modify it appropriately.
 
-NOTE
-If the left hand column is also a header, the <td></td> should be <th></th> instead. Miscellaneous tags and styles
+#### Metadata
 
+```
+<!DOCTYPE html>
+<html lang="en">
+<head prefix="DC: http://purl.org/dc/terms/">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Kairos XX.X: Author, Article Title – Page title</title>
+<!--BEGIN Dublin Core Metadata-->
+<meta name="DC.title" content="Example Title: Example Title">
+<meta name="DC.creator" content="Author I. Example">
+<meta name="DC.type" content="Text">
+<meta name="DC.format" content="text/html">
+<meta name="DC.language" content="en">
+<meta name="DC.subject" content="Examplekeyword1, Examplekeyword2, Examplekeyword3, Examplekeyword4, Examplekeyword5">
+<meta name="DC.publisher" content="Kairos: A Journal of Rhetoric, Technology, and Pedagogy">
+<meta name="DC.source" content="XX.X">
+<meta name="DC.isPartOf" content="Section">
+<meta name="DC.date" content="YYYY-MM-DD">
+<meta name="DC.identifier" content="http://kairos.technorhetoric.net/XX.X/section/author/pagetitle">
+<meta name="DC.description" content=" SHORT ABSTRACT GOES HERE ">
+<!--END Dublin Core Metadata-->
+<!--BEGIN Metdata for Google Scholar -->
+<meta name="citation_title" content="Example Title: Example Title">
+<meta name="citation_author" content="Author I. Example">
+<meta name="citation_date" content=" YYYY/MM/DD ">
+<!--END Metadata for Google Scholar-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+```
 
+#### Modifying the Metadata
 
+Reminders: <!-- Should be admonition -->
+
+Use straight quotes, not curly quotes in all HTML, including metadata. Use Title Case for titles Don’t put spaces between quotation marks and the text inside it. (content=“Abstract” is correct, content=” Abstract “ is incorrect.)
+
+##### As long as the piece is written in English, there are no modifications for lines 1-5.
+
+```
+<!DOCTYPE html>
+<html lang="en">
+<head prefix="DC: http://purl.org/dc/terms/">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+```
+##### Include the full title of the webtext (with any punctuation) as well as the name of the individual page in the `<title>` element.
+
+```
+<title>Kairos XX.X: Author, Article Title - Page Title</title>
+```
+
+* [Single author example.](link)
+* [Multiple author example.](link)
+
+##### Inlude the full title of the webtext (with any punctuation) in the `content` attribute of the `<meta name="DC.title">` element.
+
+```
+<meta name="DC.title" content="Opening an Invitation to Remix: Interviews with Kairos Best Webtext Winners"> 
+```
+
+##### Include the full name of each author and/or designer in the `content` attribute of individual `<meta name="DC.creator">` elements. For collaborative webtext, this means adding a `<meta name="DC.creator">` element for each author.
+
+```
+<meta name="DC.creator" content="Susan Delagrange"> 
+<meta name="DC.creator" content="David Rieder"> 
+<meta name="DC.creator" content="Madeleine Sorapure">
+<meta name="DC.creator" content="Remi Yergeau">
+```
+
+##### The next three lines (DC. type, DC.format, DC.language) do not require modifications.
+
+```
+<meta name="DC.type" content="Text">
+<meta name="DC.format" content="text/html">
+<meta name="DC.language" content="en">
+```
+
+##### Include webtext keywords in the `content` attribute of the `<meta name="DC.subject">` element. These are located [NEED TO INSERT THIS LOCATION]. If the author hasn't provided keywords, write them yourself.
+
+```
+<meta name="DC.subject" content="webtext, award winners, Kairos, remix, interviews">
+
+```
