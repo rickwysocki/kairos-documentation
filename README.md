@@ -1,6 +1,6 @@
 # Kairos Documentation
 
-This is a project to revise and improve the production cycle documentation for _[Kairos: A Journal of Rhetoric, Technology, and Pedagogy](kairos.technorhetoric.net)_. 
+This is a project to revise and improve the production cycle documentation for _[Kairos: A Journal of Rhetoric, Technology, and Pedagogy](https://kairos.technorhetoric.net)_. 
 
 ## Documentation Assumptions
 
